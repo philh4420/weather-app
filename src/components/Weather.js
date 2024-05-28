@@ -37,7 +37,7 @@ const Weather = () => {
     setError(null);
     try {
       const weatherAPIResponse = await axios.get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHERAPI_KEY}&q=${city}&days=1&aqi=yes&alerts=yes`
+        `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHERAPI_KEY}&q=${city}&days=1&aqi=yes&alerts=yes`
       );
       const forecastResponse = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&units=${units}`
@@ -57,7 +57,7 @@ const Weather = () => {
     setError(null);
     try {
       const weatherAPIResponse = await axios.get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHERAPI_KEY}&q=${latitude},${longitude}&days=1&aqi=yes&alerts=yes`
+        `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHERAPI_KEY}&q=${latitude},${longitude}&days=1&aqi=yes&alerts=yes`
       );
       const forecastResponse = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&units=${units}`
